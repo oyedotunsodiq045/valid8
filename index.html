@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Validator</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Valid8</a>
+      </div>
+    </nav>
+    <br />
+
+    <div class="container">
+      <p id="result" style="color: red;"></p>
+
+      <div class="form-group">
+        <label for="">Enter email or phone number</label>
+        <input
+          class="form-control"
+          id="input"
+          value=""
+          placeholder="Enter email or phone number"
+        />
+      </div>
+      <button type="button" onclick="validate()" class="btn btn-primary">
+        Validate
+      </button>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </body>
+</html>
