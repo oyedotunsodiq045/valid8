@@ -11,23 +11,37 @@ function validate() {
   const num = param.toString().length;
   const result = document.getElementById('result');
 
-  if (isLetter(res)) {
-    // Check for Email
-    if (reg.test(input.value) == false) {
-      result.style.color = 'red';
-      result.innerHTML = 'Invalid email => ' + param;
-    } else {
-      result.style.color = 'DarkGreen';
-      result.innerHTML = 'Valid Email => ' + param;
-    }
-  } else {
-    // Check for Number
-    if (num > 10) {
-      result.style.color = 'DarkGreen';
-      result.innerHTML = 'Valid Number => ' + param;
-    } else {
-      result.style.color = 'red';
-      result.innerHTML = 'Invalid Number => ' + param;
-    }
-  }
+  // Ternary
+  isLetter(res)
+    ? reg.test(input.value) == false
+      ? ((result.style.color = 'red'),
+        (result.innerHTML = 'Invalid email => ' + param))
+      : ((result.style.color = 'DarkGreen'),
+        (result.innerHTML = 'Valid email => ' + param))
+    : num > 10
+    ? ((result.style.color = 'DarkGreen'),
+      (result.innerHTML = 'Valid Number => ' + param))
+    : ((result.style.color = 'red'),
+      (result.innerHTML = 'Invalid Number => ' + param));
+
+  // IfElse
+  // if (isLetter(res)) {
+  //   // Check for Email
+  //   if (reg.test(input.value) == false) {
+  //     result.style.color = 'red';
+  //     result.innerHTML = 'Invalid email => ' + param;
+  //   } else {
+  //     result.style.color = 'DarkGreen';
+  //     result.innerHTML = 'Valid Email => ' + param;
+  //   }
+  // } else {
+  //   // Check for Number
+  //   if (num > 10) {
+  //     result.style.color = 'DarkGreen';
+  //     result.innerHTML = 'Valid Number => ' + param;
+  //   } else {
+  //     result.style.color = 'red';
+  //     result.innerHTML = 'Invalid Number => ' + param;
+  //   }
+  // }
 }
