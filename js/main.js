@@ -15,14 +15,14 @@ function validate() {
   isLetter(res)
     ? reg.test(input.value) == false
       ? ((result.style.color = 'red'),
-        (result.innerHTML = 'Invalid email => ' + param))
+        (result.innerHTML = 'Invalid email <=> ' + param))
       : ((result.style.color = 'DarkGreen'),
-        (result.innerHTML = 'Valid email => ' + param))
-    : num > 10
-    ? ((result.style.color = 'DarkGreen'),
-      (result.innerHTML = 'Valid Number => ' + param))
-    : ((result.style.color = 'red'),
-      (result.innerHTML = 'Invalid Number => ' + param));
+        (result.innerHTML = 'Valid email <=> ' + param))
+    : num >= 11
+      ? ((result.style.color = 'DarkGreen'),
+        (result.innerHTML = 'Valid Number <=> ' + param))
+      : ((result.style.color = 'red'),
+        (result.innerHTML = 'Invalid Number <=> ' + param));
 
   // If...Else
   // if (isLetter(res)) {
