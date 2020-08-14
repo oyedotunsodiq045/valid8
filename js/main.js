@@ -14,21 +14,19 @@ function validate() {
     // Check for Email
     if (reg.test(input.value) == false) {
       document.getElementById('result').style.color = 'red';
-      document.getElementById('result').innerHTML = 'Invalid email =>' + param;
-      return false;
+      document.getElementById('result').innerHTML = 'Invalid email => ' + param;
     } else {
       document.getElementById('result').style.color = 'DarkGreen';
-      document.getElementById('result').innerHTML = 'Valid Email =>' + param;
+      document.getElementById('result').innerHTML = 'Valid Email => ' + param;
     }
   } else {
     // Check for Number
     if (num > 10) {
       document.getElementById('result').style.color = 'DarkGreen';
-      document.getElementById('result').innerHTML = 'Valid Number =>' + param;
-      return false;
+      document.getElementById('result').innerHTML = 'Valid Number => ' + param;
     } else {
       document.getElementById('result').style.color = 'red';
-      document.getElementById('result').innerHTML = 'Invalid Number =>' + param;
+      document.getElementById('result').innerHTML = 'Invalid Number => ' + param;
     }
   }
 }
