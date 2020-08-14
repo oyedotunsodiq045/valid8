@@ -24,7 +24,7 @@ function validate() {
     : ((result.style.color = 'red'),
       (result.innerHTML = 'Invalid Number => ' + param));
 
-  // IfElse
+  // If...Else
   // if (isLetter(res)) {
   //   // Check for Email
   //   if (reg.test(input.value) == false) {
